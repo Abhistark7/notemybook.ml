@@ -519,14 +519,14 @@ span {
 #Contact .submit-btn button {
   font-size: 16px;
   color: #fff;
-  background-color: #02ccba;
+  background-color: #474747;
   padding: 15px 30px;
   border: none;
   cursor: pointer;
   border-radius: 6px;
 }
 #Contact .submit-btn button:hover {
-	background-color: #07bcab;
+	background-color: #474747;
 }
 footer.footer {
   padding-top: 70px;
@@ -544,7 +544,7 @@ footer.footer .social-link {
   padding: 10px;
 }
 footer.footer .social-link:hover {
-	background-color: #07bcab;
+	background-color: #4d4d4d;
 }
 footer.footer p.small a {
 	color: #636c72;
