@@ -135,7 +135,7 @@ span {
 #Banner {
   position: relative;
   height: 100vh;
-  background: #00e676;
+  background: #000000;
   color: #fff;
 }
 #Banner .content-wrap {
@@ -156,12 +156,12 @@ span {
   padding: 0;
 }
 #Banner .btn-primary {
-  background-color: #02ccba;
+  background-color: #dddddd;
   color: #fff;
   border: none;
 }
 #Banner .btn-primary:hover {
-	background-color: #07bcab;
+	background-color: #636363;
 }
 #Services {
   background-color: #fafafa;
