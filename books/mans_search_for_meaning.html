@@ -1,0 +1,653 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Man&#x27;s Search for meaning </title><style>
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	text-indent: -1.7em;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 7rem;
+	margin-bottom: 3rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, YuMincho, "Yu Mincho", "Hiragino Mincho ProN", "Hiragino Mincho Pro", "Songti TC", "Songti SC", "SimSun", "Nanum Myeongjo", NanumMyeongjo, Batang, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC', 'Noto Sans CJK KR'; }
+
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC', 'Noto Sans Mono CJK KR'; }
+
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, YuMincho, "Yu Mincho", "Hiragino Mincho ProN", "Hiragino Mincho Pro", "Songti TC", "Songti SC", "SimSun", "Nanum Myeongjo", NanumMyeongjo, Batang, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC', 'Noto Sans CJK KR'; }
+
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC', 'Noto Sans Mono CJK KR'; }
+
+.highlight-default {
+}
+.highlight-gray {
+	color: rgb(155,154,151);
+}
+.highlight-brown {
+	color: rgb(100,71,58);
+}
+.highlight-orange {
+	color: rgb(217,115,13);
+}
+.highlight-yellow {
+	color: rgb(223,171,1);
+}
+.highlight-teal {
+	color: rgb(15,123,108);
+}
+.highlight-blue {
+	color: rgb(0, 122, 255);
+}
+.highlight-purple {
+	color: rgb(105,64,165);
+}
+.highlight-pink {
+	color: rgb(173,26,114);
+}
+.highlight-red {
+	color: rgb(224,62,62);
+}
+.highlight-gray_background {
+	background: rgb(235,236,237);
+}
+.highlight-brown_background {
+	background: rgb(233,229,227);
+}
+.highlight-orange_background {
+	background: rgb(250,235,221);
+}
+.highlight-yellow_background {
+	background: rgb(251,243,219);
+}
+.highlight-teal_background {
+	background: rgb(221,237,234);
+}
+.highlight-blue_background {
+	background: rgb(221,235,241);
+}
+.highlight-purple_background {
+	background: rgb(234,228,242);
+}
+.highlight-pink_background {
+	background: rgb(244,223,235);
+}
+.highlight-red_background {
+	background: rgb(251,228,228);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(55, 53, 47, 0.6);
+	fill: rgba(55, 53, 47, 0.6);
+}
+.block-color-brown {
+	color: rgb(100,71,58);
+	fill: rgb(100,71,58);
+}
+.block-color-orange {
+	color: rgb(217,115,13);
+	fill: rgb(217,115,13);
+}
+.block-color-yellow {
+	color: rgb(223,171,1);
+	fill: rgb(223,171,1);
+}
+.block-color-teal {
+	color: rgb(15,123,108);
+	fill: rgb(15,123,108);
+}
+.block-color-blue {
+	color: rgb(11,110,153);
+	fill: rgb(11,110,153);
+}
+.block-color-purple {
+	color: rgb(105,64,165);
+	fill: rgb(105,64,165);
+}
+.block-color-pink {
+	color: rgb(173,26,114);
+	fill: rgb(173,26,114);
+}
+.block-color-red {
+	color: rgb(224,62,62);
+	fill: rgb(224,62,62);
+}
+.block-color-gray_background {
+	background: rgb(235,236,237);
+}
+.block-color-brown_background {
+	background: rgb(233,229,227);
+}
+.block-color-orange_background {
+	background: rgb(250,235,221);
+}
+.block-color-yellow_background {
+	background: rgb(251,243,219);
+}
+.block-color-teal_background {
+	background: rgb(221,237,234);
+}
+.block-color-blue_background {
+	background: rgb(221,235,241);
+}
+.block-color-purple_background {
+	background: rgb(234,228,242);
+}
+.block-color-pink_background {
+	background: rgb(244,223,235);
+}
+.block-color-red_background {
+	background: rgb(251,228,228);
+}
+.select-value-color-default { background-color: rgba(206,205,202,0.5); }
+.select-value-color-gray { background-color: rgba(155,154,151, 0.4); }
+.select-value-color-brown { background-color: rgba(140,46,0,0.2); }
+.select-value-color-orange { background-color: rgba(245,93,0,0.2); }
+.select-value-color-yellow { background-color: rgba(233,168,0,0.2); }
+.select-value-color-green { background-color: rgba(0,135,107,0.2); }
+.select-value-color-blue { background-color: rgba(0,120,223,0.2); }
+.select-value-color-purple { background-color: rgba(103,36,222,0.2); }
+.select-value-color-pink { background-color: rgba(221,0,129,0.2); }
+.select-value-color-red { background-color: rgba(255,0,26,0.2); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head>
+<body><article id="66018de4-cc16-4bf7-805d-2f1987d8e630" class="page serif"><header><img class="page-cover-image" src="https://www.notion.so/images/page-cover/met_vincent_van_gogh_ginoux.jpg" style="object-position:center 24.370000000000005%"/><div class="page-header-icon page-header-icon-with-cover"><img class="icon" src="../images/mans_search_for_meaning.jpeg"/></div><h1 class="page-title">Man&#x27;s Search for meaning </h1><table class="properties"><tbody><tr class="property-row property-row-text"><th><span class="icon property-icon"><svg viewBox="0 0 14 14" style="width:14px;height:14px;display:block;fill:rgba(55, 53, 47, 0.4);flex-shrink:0;-webkit-backface-visibility:hidden" class="typesText"><path d="M7,4.56818 C7,4.29204 6.77614,4.06818 6.5,4.06818 L0.5,4.06818 C0.223858,4.06818 0,4.29204 0,4.56818 L0,5.61364 C0,5.88978 0.223858,6.11364 0.5,6.11364 L6.5,6.11364 C6.77614,6.11364 7,5.88978 7,5.61364 L7,4.56818 Z M0.5,1 C0.223858,1 0,1.223858 0,1.5 L0,2.54545 C0,2.8216 0.223858,3.04545 0.5,3.04545 L12.5,3.04545 C12.7761,3.04545 13,2.8216 13,2.54545 L13,1.5 C13,1.223858 12.7761,1 12.5,1 L0.5,1 Z M0,8.68182 C0,8.95796 0.223858,9.18182 0.5,9.18182 L11.5,9.18182 C11.7761,9.18182 12,8.95796 12,8.68182 L12,7.63636 C12,7.36022 11.7761,7.13636 11.5,7.13636 L0.5,7.13636 C0.223858,7.13636 0,7.36022 0,7.63636 L0,8.68182 Z M0,11.75 C0,12.0261 0.223858,12.25 0.5,12.25 L9.5,12.25 C9.77614,12.25 10,12.0261 10,11.75 L10,10.70455 C10,10.4284 9.77614,10.20455 9.5,10.20455 L0.5,10.20455 C0.223858,10.20455 0,10.4284 0,10.70455 L0,11.75 Z"></path></svg></span>Author</th><td>Viktor Frankl</td></tr><tr class="property-row property-row-text"><th><span class="icon property-icon"><svg viewBox="0 0 14 14" style="width:14px;height:14px;display:block;fill:rgba(55, 53, 47, 0.4);flex-shrink:0;-webkit-backface-visibility:hidden" class="typesText"><path d="M7,4.56818 C7,4.29204 6.77614,4.06818 6.5,4.06818 L0.5,4.06818 C0.223858,4.06818 0,4.29204 0,4.56818 L0,5.61364 C0,5.88978 0.223858,6.11364 0.5,6.11364 L6.5,6.11364 C6.77614,6.11364 7,5.88978 7,5.61364 L7,4.56818 Z M0.5,1 C0.223858,1 0,1.223858 0,1.5 L0,2.54545 C0,2.8216 0.223858,3.04545 0.5,3.04545 L12.5,3.04545 C12.7761,3.04545 13,2.8216 13,2.54545 L13,1.5 C13,1.223858 12.7761,1 12.5,1 L0.5,1 Z M0,8.68182 C0,8.95796 0.223858,9.18182 0.5,9.18182 L11.5,9.18182 C11.7761,9.18182 12,8.95796 12,8.68182 L12,7.63636 C12,7.36022 11.7761,7.13636 11.5,7.13636 L0.5,7.13636 C0.223858,7.13636 0,7.36022 0,7.63636 L0,8.68182 Z M0,11.75 C0,12.0261 0.223858,12.25 0.5,12.25 L9.5,12.25 C9.77614,12.25 10,12.0261 10,11.75 L10,10.70455 C10,10.4284 9.77614,10.20455 9.5,10.20455 L0.5,10.20455 C0.223858,10.20455 0,10.4284 0,10.70455 L0,11.75 Z"></path></svg></span>Genre</th><td>Nonfiction, Psychology, Philosophy, History, Memoir</td></tr><tr class="property-row property-row-url"><th><span class="icon property-icon"><svg viewBox="0 0 14 14" style="width:14px;height:14px;display:block;fill:rgba(55, 53, 47, 0.4);flex-shrink:0;-webkit-backface-visibility:hidden" class="typesUrl"><path d="M3.73333,3.86667 L7.46667,3.86667 C8.49613,3.86667 9.33333,4.70387 9.33333,5.73333 C9.33333,6.7628 8.49613,7.6 7.46667,7.6 L6.53333,7.6 C6.01813,7.6 5.6,8.0186 5.6,8.53333 C5.6,9.04807 6.01813,9.46667 6.53333,9.46667 L7.46667,9.46667 C9.5284,9.46667 11.2,7.79507 11.2,5.73333 C11.2,3.6716 9.5284,2 7.46667,2 L3.73333,2 C1.6716,2 0,3.6716 0,5.73333 C0,7.124 0.762067,8.33453 1.88953,8.97713 C1.87553,8.83107 1.86667,8.6836 1.86667,8.53333 C1.86667,7.92013 1.98753,7.33447 2.2036,6.7978 C1.99267,6.4954 1.86667,6.12953 1.86667,5.73333 C1.86667,4.70387 2.70387,3.86667 3.73333,3.86667 Z M12.1095,5.28907 C12.1231,5.4356 12.1333,5.58307 12.1333,5.73333 C12.1333,6.34607 12.0101,6.9294 11.7931,7.46513 C12.0059,7.768 12.1333,8.13573 12.1333,8.53333 C12.1333,9.5628 11.2961,10.4 10.2667,10.4 L6.53333,10.4 C5.50387,10.4 4.66667,9.5628 4.66667,8.53333 C4.66667,7.50387 5.50387,6.66667 6.53333,6.66667 L7.46667,6.66667 C7.98187,6.66667 8.4,6.24807 8.4,5.73333 C8.4,5.2186 7.98187,4.8 7.46667,4.8 L6.53333,4.8 C4.4716,4.8 2.8,6.4716 2.8,8.53333 C2.8,10.59507 4.4716,12.2667 6.53333,12.2667 L10.2667,12.2667 C12.3284,12.2667 14,10.59507 14,8.53333 C14,7.14267 13.2375,5.93167 12.1095,5.28907 Z"></path></svg></span>Good Reads Link</th><td><a href="https://www.goodreads.com/book/show/4069.Man_s_Search_for_Meaning" class="url-value">https://www.goodreads.com/book/show/4069.Man_s_Search_for_Meaning</a></td></tr><tr class="property-row property-row-text"><th><span class="icon property-icon"><svg viewBox="0 0 14 14" style="width:14px;height:14px;display:block;fill:rgba(55, 53, 47, 0.4);flex-shrink:0;-webkit-backface-visibility:hidden" class="typesText"><path d="M7,4.56818 C7,4.29204 6.77614,4.06818 6.5,4.06818 L0.5,4.06818 C0.223858,4.06818 0,4.29204 0,4.56818 L0,5.61364 C0,5.88978 0.223858,6.11364 0.5,6.11364 L6.5,6.11364 C6.77614,6.11364 7,5.88978 7,5.61364 L7,4.56818 Z M0.5,1 C0.223858,1 0,1.223858 0,1.5 L0,2.54545 C0,2.8216 0.223858,3.04545 0.5,3.04545 L12.5,3.04545 C12.7761,3.04545 13,2.8216 13,2.54545 L13,1.5 C13,1.223858 12.7761,1 12.5,1 L0.5,1 Z M0,8.68182 C0,8.95796 0.223858,9.18182 0.5,9.18182 L11.5,9.18182 C11.7761,9.18182 12,8.95796 12,8.68182 L12,7.63636 C12,7.36022 11.7761,7.13636 11.5,7.13636 L0.5,7.13636 C0.223858,7.13636 0,7.36022 0,7.63636 L0,8.68182 Z M0,11.75 C0,12.0261 0.223858,12.25 0.5,12.25 L9.5,12.25 C9.77614,12.25 10,12.0261 10,11.75 L10,10.70455 C10,10.4284 9.77614,10.20455 9.5,10.20455 L0.5,10.20455 C0.223858,10.20455 0,10.4284 0,10.70455 L0,11.75 Z"></path></svg></span>Reading Time</th><td>12 min read</td></tr></tbody></table></header><div class="page-body"><p id="07a562ae-b9e4-4833-a683-3667867954b1" class="">
+</p><h3 id="6f2a45c1-e478-4a5b-98df-446ffa1d74aa" class=""><mark class="highlight-gray">Man&#x27;s search for meaning is a book written by Viktor Frankl, a psychotherapist. In his memoir, he describes his life in Nazi death camps, the suffering that he went through, and ultimately the lessons he learned on spiritual survival. He also describes logotherapy, his theory in which he describes that man&#x27;s pursuit is not for pleasure but to find meaning in life.</mark></h3><p id="88d143e8-cfd9-4f8c-accf-194104f91a54" class="">
+</p><p id="9a2d28f6-e34b-43d1-9d4a-747f41df2a5a" class="">Viktor Frankl starts off the book by quoting Nietzsche - </p><blockquote id="137a6ae9-4297-4447-8c68-fccb149b0ef5" class="highlight-blue">&quot;He who has a <em>why</em> to live can bear with almost any <em>how</em>.&quot;</blockquote><h1 id="a4ed6da3-af84-4659-b671-625725a8c53c" class="">Part ONE- Experiences in a Concentration Camp</h1><p id="48b7181d-4cef-4c81-b3d3-e5010dc01f7a" class="">
+</p><p id="5a5f8de3-65db-46cd-97eb-294d7b0b7aeb" class="">Frankl takes us through the reality of living in Nazi death camps, where he shares stories about the condition of the camps, and also about the people living &amp; dying there. Most of the events described in this book are from small camps, where most of the real extermination took place.</p><p id="efa74f0f-8634-4ce7-936f-6b4dbcd64251" class="">
+</p><p id="a7610717-22a2-4a40-a073-6886dd00f087" class="">Outsiders knew very little of the hard fight for existence which raged among the prisoners. There was an unrelenting struggle for daily bread and for life itself. There was a case for transport which was announced to transfer prisoners to another camp, but it was safe to assume that the final destination would be the gas chambers.</p><p id="99cfd356-9f04-4686-9aae-e79001d60d7b" class="">
+</p><p id="9136f851-d0bd-407c-bc94-fe88c7c4d0ba" class="">When they entered the camps, all possessions were taken away from them. The prisoners weren&#x27;t identified by their name or face, but just by a number tattooed in their skin. If they had good boots, that was taken by the guards. All that was left with the prisoners was a uniform of rags that would have made a scarecrow elegant by comparison.</p><p id="78251414-2aae-4cd7-83eb-835392fe1cda" class="">
+</p><p id="e306f73f-e84d-42cc-aeca-cb5cc21010cf" class="">The new arrivals job was to clean the latrines and remove the sewage. If, some of the excrement splashed into their face, any sign of disgust by the prisoner or any attempt to wipe off the filth would be punished by a blow from a Capo (Toughest &amp; oldest prisoners who overlooked the work). </p><p id="498fea78-9f33-4bd7-b1ad-4aacb85865f4" class="">
+</p><p id="8f75db42-889e-47d0-9ff3-6d942fbad5aa" class="">Describing the brutality towards the prisoners in the camp, Frankl explains an incident where a 12-year-old boy was carried in who had been forced to stand at attention for hours in the snow or to work with bare feet because there were no shoes for him in the camp. His toes were frostbitten. He writes — Disgust, horror, and pity are emotions that our spectators(guards) could not really feel anymore. The sufferers, the dying, and the dead all became a common sight.</p><p id="b7cafa08-9771-439e-8014-9490901375b2" class="">
+</p><p id="872d86da-0e1c-4650-b006-1ad01b69ba92" class="">Frankl describes another incident of brutality was he along with the prisoners were standing in a line to collect bread when the man standing behind him was standing a bit off to one side, when Frankl received two sharps blows on his head. He describes &quot;It is not the physical pain which hurt the most, it is the mental agony caused by the injustice, the unreasonableness of it all&quot;.</p><p id="a7e89448-f2c7-4331-9cc9-d5a0ce0f4567" class="">
+</p><p id="ff169b69-5e08-4e2c-bc3b-5d9bf801d247" class="">Throughout all these incidents Frankl shows us the horrible sufferings that prisoners there got through every day, some made it to the next day, some didn&#x27;t. He goes on to quote Dostoevski - </p><p id="4b135ba0-6f6f-4d20-a4b8-0b114f98ab05" class="">
+</p><blockquote id="4e87c2a0-df01-4edb-ab4f-4f5863fdb600" class="">&quot;<mark class="highlight-blue">There is only one thing that I dread: not to be worthy of my sufferings.</mark>&quot;</blockquote><p id="8bb33dc8-7580-463e-8f33-bb17f048faa2" class="">
+</p><h1 id="acea9665-2298-42fe-8f6b-f3818abe5974" class="">Part TWO - Logotherapy in a Nutshell</h1><p id="7bb0d240-7fbd-455c-8553-53879b85fa86" class=""><em>Logos </em>is a Greek word that denotes &quot;meaning&quot;. Logotherapy focuses on the meaning of human existence as well as on man&#x27;s search for such a meaning. According to logotherapy, this striving to find meaning in one&#x27;s life is the primary motivational force in man.</p><p id="1b76ee5f-5ce6-4b8e-87b2-5418dc3b0319" class="">
+</p><blockquote id="9a8651c8-73b6-4076-b81f-ee6ac2f3c2bc" class=""><mark class="highlight-blue">&quot;Thus, logotherapy sees in responsibleness the very essence of human&quot;</mark></blockquote><p id="d3f80e3a-c41c-4b5d-85d0-217762f7ba78" class="">
+</p><h2 id="6075771d-37e5-4241-bc0b-3e8fb41d9026" class="">Noogenic neuroses</h2><p id="30d06fb5-733a-4324-a603-a6659a672423" class="">There is nothing in the world, I venture to say, that would so effectively help one to survive even the worst conditions as the knowledge that there is a meaning of one&#x27;s life.</p><p id="378846eb-19ad-4f03-bbd9-91ff0211e96c" class="">
+</p><h2 id="ff98e8bf-fcfb-456a-afbf-87a039914a25" class="">Noo-Dynamics</h2><p id="b1af468f-ca9f-49a8-b5f0-38df4e56dcf1" class="">Frankl points out that — Mental health is based on a certain degree of tension, the tension between what one has already achieved and what one still ought to accomplish, or the gap between what one is and what one should become. Frankl shows us that it&#x27;s the dangerous misconception of mental hygiene to assume that what man needs in the first place is equilibrium or a tensionless state (homeo-statis), rather he tells us that, what a man actually needs is not a tensionless state but rather the striving and struggling for a worthwhile goal, a freely chosen task. Thereby Frankl establishes a term - &quot;nöö-dynamics&quot;, i.e., the existential dynamics in a polar field of tension where one pole is represented by a meaning that is to be fulfilled and the other pole by the man who has to fulfill it.</p><p id="dfaa36a4-0818-4dde-a9bd-2aa45ef7c706" class="">
+</p><h2 id="01be711b-2cc9-476d-9fec-3a3a86c1fb53" class="">The existential vacuum</h2><p id="efcee947-9f70-462e-bc65-792b1b1a87ac" class="">Frankl tells us that existential vacuum is a widespread phenomenon of the 20th century, he argues that man today either wishes to do what other people do (conformism) or he does what people wish him to do (totalitarianism). He also tells us about &quot;Sunday neurosis&quot;, the kind of depression which afflicts people who become aware of the lack of content in their lives when the rush of the busy week is over and the void within themselves becomes manifest. He also argues that sometimes the frustrated will to meaning is vicariously compensated for by a will to power, the will to money, or the will to pleasure. That is why existential frustration often eventuates in sexual compensation.</p><p id="5ac70ce1-4e04-4205-a78a-a9aabadcef67" class="">
+</p><h2 id="6e80568b-be0b-4028-b2ad-de8f0d0999c1" class="">The meaning of life</h2><p id="caef1510-bb3f-4c2f-9376-1584f64e1fd7" class="">About meaning of life, Frankl explains to us, that asking the meaning of life is to ask a chess champion: &quot;Tell me, Master, what is the best move in the world?&quot;. What matters, therefore, is not the meaning of life in general but rather the specific meaning of a person&#x27;s life at a given moment. On this question, he ultimately explains us —</p><blockquote id="6576bbfc-3ffd-4a3a-b966-a68d30b3d487" class=""><mark class="highlight-blue">The question of the meaning of life may actually be reversed. Ultimately, a man should not ask what the meaning of his life is, but rather he must recognize that it is he who is asked. In a word, each man is questioned by life; and he can only answer life by answering for his own life.</mark></blockquote><p id="912ac298-0534-4730-aab4-8907ce73388f" class="">
+</p><blockquote id="7a0f24fa-16af-45a5-a7c5-e5f1d66db2e7" class=""><mark class="highlight-blue">A Man who becomes conscious of the responsibility he bears toward a human being who affectionately waits for him, or to an unfinished work, will never be able to throw away his life. He knows the &quot;why&quot; for his existence, and will be able to bear almost any &quot;how.&quot;</mark></blockquote><p id="09f5a501-076c-4b6a-b770-d75aae5d6517" class="">
+</p><h2 id="f0441b2b-4460-41ec-99ed-c6b2ce194bbf" class="">The essense of existence</h2><p id="23ff8ec9-2630-41d8-b1c0-296ac5949128" class="">About the essence of existence, Frankl tells us -</p><blockquote id="b587ab14-25ff-4b5b-b6c5-6358ab04b1cc" class=""><mark class="highlight-blue">&quot;Live as if you were living already for the second time and as if you had acted the first time as wrongly as you are about to act now!&quot; </mark></blockquote><p id="1e7bc544-7c2e-4dc0-8441-ee27aee45126" class="">
+</p><p id="9c676ed4-e419-4aa1-b807-508c7811af29" class="">He goes on to explain, by declaring that man is responsible and must actualize the potential meaning of his life, I wish to stress that the true meaning of life is to be discovered in the world rather than within man or his own psyche. The more one forgets himself — by giving himself to a cause to serve or another person to love — the more human he is and the more he actualizes himself. The meaning of life always changes, but that it never ceases to be. According to logotherapy, we can discover this meaning of life in three different ways -</p><ol id="60e89fd0-def5-443d-a25b-9c58e83cb0f1" class="numbered-list" start="1"><li>by creating a work or doing a deed;</li></ol><ol id="322c55d2-ef4d-48f8-b8c5-e30ed8d4c2b8" class="numbered-list" start="2"><li>by experiencing something or encountering someone;</li></ol><ol id="e0d1619b-6a02-4b56-98f5-54e821a540ca" class="numbered-list" start="3"><li>by the attitude ew take toward unavoidable suffering</li></ol><p id="390a541f-422d-4f1b-b412-d754d767bfb4" class="">
+</p><h2 id="90acf3ae-6245-4a9b-be34-c40baf6eb534" class="">The meaning of love</h2><p id="5bbdf66a-09c0-462d-9f3f-780bcb06c49f" class="">Love is the way to grasp another human being in the innermost core of his personality. No one can become fully aware of the very essence of another human being unless he loves him. Love is as primary a phenomenon as sex. Normally, sex is a mode of expression for love. Sex is justified, as long as it is a vehicle of love. Sex is a way of expressing the experience of that ultimate togetherness which is called love.</p><p id="cabd5cbf-8d3d-4009-8fcc-c31551a0e7b7" class="">
+</p><h2 id="096a2045-6b9d-427b-8949-128527256c91" class="">The meaning of suffering</h2><p id="0c1bd9f9-46ff-4948-8969-941bb461ef58" class="">We must never forget that we may also find meaning in life even when confronted with a hopeless situation, when facing a fate that cannot be changed. About suffering Frankl tell us —</p><blockquote id="572521d3-2f06-4e60-ba1b-e971d9bca16f" class=""><mark class="highlight-blue">&quot;In some way, suffering ceases to be suffering at the moment it finds a meaning, such as the meaning of a sacrifice.&quot;</mark></blockquote><p id="6fd63c1f-726e-483a-813b-3a15ecd2fe27" class="">
+</p><blockquote id="51e34284-36be-4c1d-bd7d-31eb80094f0a" class=""><mark class="highlight-blue">&quot;Man who for years had thought he had reached the absolute limit of all possible suffering now found that suffering has no limits, and that he could suffer still more, and still more intensely.&quot;</mark></blockquote><p id="e17c9646-0e4f-4338-a315-ea0a4ada0854" class="">
+</p><blockquote id="91345c0c-b4de-42e1-a837-15cc597caefc" class=""><mark class="highlight-blue">&quot;I know that without the suffering, the growth that I have achieved would have been impossible.&quot;</mark></blockquote><p id="65bbccdc-4433-4c98-8f55-184d7e550c81" class="">
+</p><h2 id="99eb41ef-a3e0-46bb-a112-9e820d30a4b3" class="">Life&#x27;s Transitoriness</h2><p id="819c1be6-311c-4b91-bdeb-7eb173110432" class="">Frankl describes us that the only aspects of life are the potentialities; but as soon as they are actualized, they are rendered realities at that very moment; they are saved and delivered into the past, wherein they are rescued and preserved from transitoriness. For, in the past, nothing is irretrievably lost but everything irrevocably lived to the fullest.</p><p id="d904bf8d-c3ec-4186-832e-051078f75d1d" class="">He tells us — </p><blockquote id="8428ab33-dd24-42b6-8970-f3bd02c045bd" class=""><mark class="highlight-blue">&quot;</mark><mark class="highlight-blue"><em>Having been</em></mark><mark class="highlight-blue">, is the surest kind of being.&quot;</mark></blockquote><p id="4a81a82f-645a-4943-b027-886904e7ce93" class="">
+</p><h2 id="a84eb3e9-93eb-4c5f-a6f2-eee48a681367" class="">Critique of Pan-Determinism</h2><p id="0193f1ca-f04d-42c8-868a-bdd9168e7e14" class="">Man does not simply exist but always decides what his existence will be, what he will become in the next moment. By the same token, every human being has the freedom to change at any </p><p id="25c64f54-9679-4e9f-90f1-cb315ac660ff" class="">
+</p><h1 id="f3818374-700a-455a-bef6-8d6ddcf95a2f" class="">Conclusion</h1><p id="c254b5aa-757f-4334-b72c-a3312194a7e7" class="">Personally, what this book has taught me is — We have heard the saying that &quot;With great power comes great responsibility&quot;. Let&#x27;s try to look at the power and opportunity that human life can possibly possess, let&#x27;s look at the most accomplished figure of our generation, Elon Musk. He has created new industries, made transport greener by his electric vehicles, made space flight cheaper and more accessible for all of us and this doesn&#x27;t even account for half of the legacy that he will leave for the world after he is gone. This goes to show a probable potential of a single human life, the amount of change one single human life can bring to the whole world, for its betterment. Imagine what the responsibility for that life would be. We have to understand this and be very responsible for the consciousness that we possess.</p><p id="a8c159bc-0907-4af5-a697-39af3eecfc23" class="">
+</p><p id="989f0b77-8e09-4343-8304-a078464f359b" class="">
+</p><blockquote id="4467660c-5123-4745-9847-21aeecbc3782" class="block-color-gray">&quot;So, let us be alert—alert in a twofold sense: Since Aushwitz we know what man is capable of. And since Hiroshima we know what is at stake.&quot;</blockquote></div></article>
+</body>
+</html>
