@@ -560,4 +560,32 @@ footer.footer p.small a:hover, footer.footer p.small a.focus {
 #Contact .address-block span {
 	text-transform: none;
 }
+#Explore-book-summaries .book-box {
+  position: relative;
+  overflow: hidden;
+  height: 350px;
+  width: 90%;
+  margin-bottom: 50px;
+  object-fit: contain;
+}
+
+#Explore-book-summaries .book-box img{
+  display: block;
+  width: 100%;
+  -webkit-transition: all 0.5s ease; /* Safari and Chrome */
+    -moz-transition: all 0.5s ease; /* Firefox */
+    -ms-transition: all 0.5s ease; /* IE 9 */
+    -o-transition: all 0.5s ease; /* Opera */
+    transition: all 0.5s ease;
+}
+
+#Explore-book-summaries .book-box:hover img{
+  display: block;
+  width: 100%;
+  -webkit-transform:scale(1.1); /* Safari and Chrome */
+    -moz-transform:scale(1.1); /* Firefox */
+    -ms-transform:scale(1.1); /* IE 9 */
+    -o-transform:scale(1.1); /* Opera */
+     transform:scale(1.1);
+}
 /* Styles Begins */
